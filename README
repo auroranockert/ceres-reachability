@@ -1,0 +1,16 @@
+A library for determining the reachability of a certain host, it does however not check if that host is actually up. Just if you in theory could reach it.
+
+Requires:
+* Mac OS X 10.5 or later
+
+How to use (example in Ruby):
+
+framework 'ceres-reachability.framework'
+
+class CSReachabilityDelegate
+  def onConnect; puts "Connected! :)"; end
+  def onDisconnect; puts "Disconnected! :("; end
+end
+
+CSReachability.reachabilityWithHost("api.eve-online.com", delegate: CSReachabilityDelegate.new)
+NSApplication.sharedApplication.run
