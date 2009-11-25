@@ -5,7 +5,7 @@ Requires:
 
 How to use (example in Ruby):
 
-framework 'ceres-reachability.framework'
+framework 'ceres-reachability'
 
 class CSReachabilityDelegate
   def onConnect; puts "Connected! :)"; end
